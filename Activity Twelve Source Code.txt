@@ -1,0 +1,38 @@
+Joseph Carrillo 
+CST-150 C# I 
+Activity Twelve
+05/04/22
+
+public class H
+{
+    public static void Main()
+    {
+        //strings
+
+        //declared variabes 
+        int 
+        i, 
+        word, 
+        l;
+
+
+        
+        string str = System.IO.File.ReadAllText("Input.txt"); // reader
+       
+        l = 1;
+        word = 1;
+
+        // while loop for string //
+        while (l <= str.Length - 1)
+        {
+		// string operation 
+            if ((str[l] == '.' || str[l] == ' ' || str[l] == '\t' || str[l] == '!' || str[l] == ',' || str[l] == '?' || str[l] == '\n') && (str[l - 1] == 't' || str[l - 1] == 'e'))
+            {
+                word++;
+            }
+            l++;
+        }
+        // output 
+        Console.Write("There are {0} words ending in t or e", word); // call back word
+    }
+}
